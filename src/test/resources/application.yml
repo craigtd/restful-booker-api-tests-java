@@ -1,0 +1,21 @@
+#YAML properties for acceptance tests
+#spring will use the properties below by default - these are considered
+#there are a variety of ways to override these, please see:
+#https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html
+#the easiest thing is probably to set a command line argument for the properties you wish to override, for example:
+#-DauthHeader=myHeader
+#to enable these arguments activate the LOCALHOST1 profile -Dspring.profiles.active=LOCALHOST1
+spring:
+  profiles: LOCALHOST1
+endpointUrl: http://localhost:8080
+dbConnenctionString :
+---
+spring:
+  profiles: RESTFULBOOKER
+endpointUrl: http://localhost:3001
+dbConnenctionString :
+---
+spring:
+  profiles: LOCALHOST3
+endpointUrl: http://localhost:8082
+dbConnenctionString :
